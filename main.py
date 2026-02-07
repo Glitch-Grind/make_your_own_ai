@@ -3,14 +3,21 @@ from safety.checker import is_safe
 
 
 def main():
-    user_input = input("You: ")
+    print("AI started. Type 'exit' to quit.")
 
-    if not is_safe(user_input):
-        print("AI: Input rejected by safety system.")
-        return
+    while True:
+        user_input = input("You: ")
 
-    reply = respond(user_input)
-    print("AI:", reply)
+        if user_input.lower() == "exit":
+            print("AI: Goodbye.")
+            break
+
+        if not is_safe(user_input):
+            print("AI: Input rejected by safety system.")
+            continue
+
+        reply = respond(user_input)
+        print("AI:", reply)
 
 
 if __name__ == "__main__":
