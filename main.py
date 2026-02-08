@@ -1,5 +1,5 @@
 from core.brain import respond
-from safety.checker import is_safe
+from safety.checker import check_safety
 
 
 def main():
@@ -12,8 +12,10 @@ def main():
             print("AI: Goodbye.")
             break
 
-        if not is_safe(user_input):
-            print("AI: Input rejected by safety system.")
+        allowed, reason = check_safety(user_input)
+
+        if not allowed:
+            print(f"AI: Input blocked because {reason}.")
             continue
 
         reply = respond(user_input)
