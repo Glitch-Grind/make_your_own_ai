@@ -1,11 +1,30 @@
-# Personal AI Project
+# Make Your Own AI
 
-An expermiental open source AI project started as a learning initiative.
+This project is a small educational AI built step by step to understand how real AI systems work.
 
-Status: Pre alpha  
-Author: Gunavardhan (7th grade)
+## What this AI does
+- Takes user input
+- Checks safety before responding
+- Responds using rules
+- Remembers simple information
+- Logs unsafe input
 
-Goals:
-- Learn how AI systems are built
-- Experiment with data filtering and safety
-- Build something understandable and ethical
+## Why this project exists
+This project was made to learn:
+- Python programming
+- Git and GitHub
+- AI safety basics
+- Software structure
+
+## How it works (simple)
+1. User types a message
+2. Safety system checks it
+3. Brain decides a response
+4. AI replies
+
+## Status
+Version v0.0.2  
+Stage pre alpha
+
+## Author
+Gunavardhan
